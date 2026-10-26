@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS implantacao_sistema
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+USE implantacao_sistema;
+
+CREATE TABLE IF NOT EXISTS socios (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(120) NOT NULL,
+    email VARCHAR(190) NOT NULL,
+    plano VARCHAR(30) NOT NULL,
+    criado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
